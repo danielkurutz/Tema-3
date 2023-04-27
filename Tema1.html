@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tema 1</title>
+</head>
+<body>
+	<h2><u>Tema 1</u></h2>
+	<label>Primul numar:</label>
+	<input type="number" id="num1" name="num1"><br>
+	<label>Al doilea numar:</label>
+	<input type="number" id="num2" name="num2">
+	<br>
+	<button onclick="inmultire()">Inmultire</button>
+	<button onclick="impartire()">Impartire</button>
+	<br>
+	<label>Rezultat:</label>
+	<input type="number" id="result" name="result" readonly>
+	
+	<script>
+		function inmultire() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var result = num1 * num2;
+			document.getElementById("result").value = result;
+		}
+
+		function impartire() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var result = num1 / num2;
+			document.getElementById("result").value = result;
+		}
+	</script>
+</body>
+</html>

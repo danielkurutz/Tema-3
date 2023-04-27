@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tema 2</title>
+  </head>
+  <body>
+    <h2><u>Tema 2</u></h2>
+    <textarea id="text"></textarea><br><br>
+    <button onclick="capitalizare()">Capitalizare</button><br><br>
+    <p id="rezultat"></p>
+    <script>
+      function capitalizare() {
+        var text = document.getElementById("text").value;
+        var cuvinte = text.split(" ");
+        var output = "";
+        for (var i = 0; i < cuvinte.length; i++) {
+          var cuvant = cuvinte[i];
+          output += cuvant.charAt(0).toUpperCase() + cuvant.slice(1) + " ";
+        }
+        document.getElementById("rezultat").innerHTML = output;
+      }
+    </script>
+  </body>
+</html>
